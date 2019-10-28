@@ -7,5 +7,5 @@ If doesn't put any arguments
 Put -runtest 5
 ![Alt text](gitREADMEImg/PutArgs.png?raw=true "-runtest 5")
 
--runtest 5 output
+"-runtest 5 output"
 ![Alt text](gitREADMEImg/RunTest 5 Output.png?raw=true "-runtest 5")
