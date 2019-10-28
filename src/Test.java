@@ -11,6 +11,14 @@ public class Test {
         Test_Console_RepeatString();
     }
 
+    public static void Test_Math_RunAll(int times){
+        testTimes = times;
+        Test_MathAdd();
+        Test_MathSub();
+        Test_MathMul();
+        Test_MathDiv();
+    }
+
     public static void Test_Console_Print() {
         for (int i = 0; i < testTimes; i++) {
             Debug.logInfo("Test_Console_Print");
@@ -32,18 +40,75 @@ public class Test {
         }
     }
 
-
     public static void Test_Console_RepeatChar() {
         for (int i = 0; i < testTimes; i++) {
             Debug.logInfo("Test_Console_RepeatChar");
-            Console.repeatChar(i,'t');
+            Console.repeatChar(i, 't');
         }
     }
 
     public static void Test_Console_RepeatString() {
         for (int i = 0; i < testTimes; i++) {
             Debug.logInfo("Test_Console_RepeatString");
-            Console.repeatString(i,"TestString" + String.valueOf(i+1));
+            Console.repeatString(i, "TestString" + String.valueOf(i + 1));
         }
     }
+
+    public static void Test_MathAdd() {
+        int b = 100;
+        int result = 0;
+        for (int i = 0; i < testTimes; i++) {
+            result = i + b;
+            Debug.logInfo("Test_MathAdd");
+            if (result == BasicMathLibrary.AddInt(i, b)) {
+                Debug.logInfo(String.valueOf(i) + " + " + String.valueOf(b) + " = " + result + " -PASS");
+            } else {
+                Debug.logInfo(String.valueOf(i) + " + " + String.valueOf(b) + " = " + result + " -FAIL");
+            }
+        }
+    }
+
+    public static void Test_MathSub() {
+        int b = 100;
+        int result = 0;
+        for (int i = 0; i < testTimes; i++) {
+            result = i - b;
+            Debug.logInfo("Test_MathSub");
+            if (result == BasicMathLibrary.SubstractInt(i, b)) {
+                Debug.logInfo(String.valueOf(i) + " - " + String.valueOf(b) + " = " + result + " -PASS");
+            } else {
+                Debug.logInfo(String.valueOf(i) + " - " + String.valueOf(b) + " = " + result + " -FAIL");
+            }
+        }
+    }
+
+    public static void Test_MathMul() {
+        int b = 100;
+        int result = 0;
+        for (int i = 0; i < testTimes; i++) {
+            result = i * b;
+            Debug.logInfo("Test_MathMul");
+            if (result == BasicMathLibrary.MultiplyInt(i, b)) {
+                Debug.logInfo(String.valueOf(i) + " * " + String.valueOf(b) + " = " + result + " -PASS");
+            } else {
+                Debug.logInfo(String.valueOf(i) + " * " + String.valueOf(b) + " = " + result + " -FAIL");
+            }
+        }
+    }
+
+    public static void Test_MathDiv() {
+        int b = 100;
+        int result = 0;
+        for (int i = 1; i <= testTimes; i++) {
+            result = i / b;
+            Debug.logInfo("Test_MathDiv");
+            if (result == BasicMathLibrary.DivideInt(i, b)) {
+                Debug.logInfo(String.valueOf(i) + " / " + String.valueOf(b) + " = " + result + " -PASS");
+            } else {
+                Debug.logInfo(String.valueOf(i) + " / " + String.valueOf(b) + " = " + result + " -FAIL");
+            }
+        }
+    }
+
+
 }
