@@ -5,8 +5,6 @@ public class RunCalculator {
 
     RunCalculator(ArrayList<String> arguments) {
         Argumentslist = arguments;
-        for(String s : Argumentslist){
-        }
     }
 
     public String Run() {
