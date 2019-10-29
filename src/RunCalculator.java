@@ -5,6 +5,8 @@ public class RunCalculator {
 
     RunCalculator(ArrayList<String> arguments) {
         Argumentslist = arguments;
+        for(String s : Argumentslist){
+        }
     }
 
     public String Run() {
@@ -14,7 +16,8 @@ public class RunCalculator {
         /*Do Multiply and Divide first Then Add and Subtract*/
         for (int i = 0; i < Argumentslist.size(); i++) {
             switch (Argumentslist.get(i)) {
-                case "*": {
+                case "X":
+                case "x": {
                     double value1 = Double.valueOf(Argumentslist.get(i - 1));
                     double value2 = Double.valueOf(Argumentslist.get(i + 1));
                     Argumentslist.set(i, String.valueOf(BasicMathLibrary.MultiplyDouble(value1, value2)));
