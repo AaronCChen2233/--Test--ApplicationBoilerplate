@@ -14,6 +14,7 @@ public class App {
 
         if(_shouldRunTests){
             Test.Test_Console_RunAll(Integer.valueOf(commandLine.Arguments[1]));
+            Test.Test_Math_RunAll(Integer.valueOf(commandLine.Arguments[1]));
         }
 
         do {
